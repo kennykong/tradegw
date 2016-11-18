@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+	<groupId>com.hofon.tradegw</groupId>
+	<artifactId>tradegw-parent</artifactId>
+	<version>1.0.0</version>
+  </parent>
+
+  <artifactId>tradegw-test</artifactId>
+  <version>${tradegw.version}</version>
+
+  <name>hofon tradegw-test</name>
+  <description>hofon tradegw-test</description>
+  <packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+        <dependency>
+        	<groupId>com.hofon.tradegw</groupId>
+        	<artifactId>tradegw-biz-manager</artifactId>
+        </dependency>	
+        <dependency>
+        	<groupId>com.hofon.tradegw</groupId>
+        	<artifactId>tradegw-biz-facade-impl</artifactId>
+        </dependency>
+	</dependencies>
+
+    <build>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <includes>
+                    <include>**/**.xml</include>
+                    <include>**/**.properties</include>
+                </includes>
+                <filtering>true</filtering>
+            </testResource>
+            <testResource>
+                <directory>src/test</directory>
+                <includes>
+                    <include>webapp/**</include>
+                </includes>
+                <filtering>true</filtering>
+            </testResource>
+
+        </testResources>
+    </build>
+</project>

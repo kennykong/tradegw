@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.hofon.tradegw</groupId>
+		<artifactId>tradegw-common-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>tradegw-common-facade</artifactId>
+	<version>${tradegw.facade.version}</version>
+
+	<name>hofon tradegw-common-facade</name>
+	<description>hofon tradegw-common-facade</description>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.hofon.tradegw</groupId>
+			<artifactId>tradegw-common-util</artifactId>
+		</dependency>		
+	</dependencies>
+<!--
+    <distributionManagement>
+        <repository>
+            <id>deployRelease</id>
+            <name>netfinworks Internal Repository</name>
+            <url>http://nexus.hofon.com:9081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>deploySnapshot</id>
+            <name>netfinworks Internal Repository</name>
+            <url>http://nexus.hofon.com:9081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement> -->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <show>private</show>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

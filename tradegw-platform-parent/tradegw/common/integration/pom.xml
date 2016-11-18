@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.hofon.tradegw</groupId>
+		<artifactId>tradegw-common-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>tradegw-common-integration</artifactId>
+	<version>${tradegw.version}</version>
+
+	<name>hofon tradegw-common-integration</name>
+	<description>hofon tradegw-common-integration</description>
+	<packaging>jar</packaging>
+
+	<dependencies>	
+		<dependency>
+			<groupId>com.hofon.tradegw</groupId>
+			<artifactId>tradegw-common-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.hofon.securitycenter</groupId>
+			<artifactId>securitycenter-common-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.hofon.trade</groupId>
+			<artifactId>trade-common-facade</artifactId>
+		</dependency>	
+		<dependency>
+			<groupId>com.hofon.member</groupId>
+			<artifactId>member-common-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.zhuking.common</groupId>
+			<artifactId>zhuking-common-lang</artifactId>
+		</dependency>		
+		<!-- dubbo -->		
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>dubbo</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.zookeeper</groupId>
+		    <artifactId>zookeeper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.netty</groupId>
+			<artifactId>netty</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-log4j12</artifactId>
+		</dependency>		
+		<!--CXF -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-management</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>asm</artifactId>
+					<groupId>asm</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+</project>
